@@ -39,13 +39,40 @@ class Login extends CI_Controller
                 //periksa role-nya
                 if ($user ['role'] == 'admin') {
                     $this->_updateLastLogin($userid);
+                    redirect('admin/menu');
+                }else if ($user['role'] == 'sekretaris') {
+                    $this ->_updateLastLogin($userid);
                     redirect('surat');
                 }else{
                     //jika password salah
-                    $this->session->set_flashdata('message', '<div class="alert alert-danger" role=""')
+                    $this->session->set_flashdata('message', '<div class="alert alert-danger" 
+                    role="alert"> <b>Error :</b> Password Salah. </div>');
+                    redirect('/');
                 }
+            } else {
+                //jika user tidak terdaftar
+            // echo "User tidak";
+            $this->session->set_flashdata('message', '<div class="alert alert-danger" 
+            role="alert"> <b>Error :</b> User Tidak Terdaftar. </div>');
+            redirect('/');
             }
         }
+        private function _updateLastLogin($userid){
+            $sql    = "UPDATE tb_user SET last_login=now() WHERE id=$userid";
+            $this->db->query($sql);
+        }
+        public function logout()
+        {
+            //hancurkan semua sesi
+            $this->session->session_destroy();
+            redirect(site_url('login'));
+        }
+        public function block()
+        {
+            $data = array(
+                'user'  => infoLogin(),
+                'title' => 'Access Denied!'
+            );
+            $this->load->view('login/error404', $data);
+        }
     }
-}
-?>
