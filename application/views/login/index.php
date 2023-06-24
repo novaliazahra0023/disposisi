@@ -8,7 +8,7 @@
 	<meta name="description" content="" />
 	<meta name="author" content="" />
 	<title>Login - Disposisi Surat</title>
-	<link href="<?= base_url('assets/css/styles.css')?>" re l="stylesheet" />
+	<link href="<?= base_url('assets/css/styles.css')?>" rel="stylesheet" />
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous">
 	</script>
 </head>
@@ -22,7 +22,7 @@
 						<div class="col-lg-5">
 							<div class="card shadow-lg border-0 rounded-lg mt-5">
 								<div class="card-header">
-									<h3 clas s="text-center font-weight-light my-4">Login</h3>
+									<h3 class="text-center font-weight-light my-4">Login</h3>
 								</div>
 								<div class="card-body">
 									<?php echo $this->session->flashdata('message'); ?>
@@ -30,8 +30,7 @@
 										<div class="form-floating mb-3">
 											<input class="form-control" id="inputEmail" name="email" type="email"
 												placeholder="name@example.com" />
-											<label for="inputEmail">E
-												mail address</label>
+											<label for="inputEmail">Email address</label>
 										</div>
 										<div class="form-floating mb-3">
 											<input class="form-control" id="inputPassword" name="password"
@@ -46,7 +45,7 @@
 										</div>
 										<div class="d-flex align-items-center justify-content-between mt-4 mb-0">
 											<a class="small" href="password.html">Forgot Password?</a>
-											<input type="submit" clas s="btn btn-primary" value="Login" />
+											<input type="submit" class="btn btn-primary" value="Login" />
 										</div>
 									</form>
 								</div>
@@ -63,8 +62,7 @@
 			<footer class="py-4 bg-light mt-auto">
 				<div class="container-fluid px-4">
 					<div class="d-flex align-items-center justify-content-between small">
-						<div class="text-muted">Copyright &copy; Your
-							Website 2021</div>
+						<div class="text-muted">Copyright &copy; Your Website 2021</div>
 						<div>
 							<a href="#">Privacy Policy</a>
 							&middot;

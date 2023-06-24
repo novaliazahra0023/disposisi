@@ -8,9 +8,10 @@
 	<meta name="description" content="" />
 	<meta name="author" content="" />
 	<title>Login - Disposisi Surat</title>
-	<link href="<?= base_url('assets/css/styles.css')?>" re l="stylesheet" />
+	<link href="<?= base_url('assets/css/styles.css')?>" rel="stylesheet" />
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous">
 	</script>
+</head>
 
 <body>
 	<div id="layoutError">
@@ -20,9 +21,9 @@
 					<div class="row justify-content-center">
 						<div class="col-lg-6">
 							<div class="text-center mt-4">
-								<img class="mb-4 img-error" sr c="assets/img/error-404-monochrome.svg" />
-								<p class="lead">This requested URL wa
-									s not found on this server.</p>
+								<img class="mb-4 img-error" src="assets/img/error-404-monochrome.svg" />
+								<p class="lead">This requested URL was not fo
+									und on this server.</p>
 								<a href="index.html">
 									<i class="fas fa-arrow-left me-1"></i>
 									Return to Dashboard
@@ -37,8 +38,7 @@
 			<footer class="py-4 bg-light mt-auto">
 				<div class="container-fluid px-4">
 					<div class="d-flex align-items-center justify-content-between small">
-						<div class="text-muted">Copyright &copy; Your
-							Website 2021</div>
+						<div class="text-muted">Copyright &copy; Your Website 2021</div>
 						<div>
 							<a href="#">Privacy Policy</a>
 							&middot;
@@ -53,4 +53,4 @@
 	<script src="<?= base_url('assets/js/scripts.js')?> "></script>
 </body>
 
-</html
+</html>
